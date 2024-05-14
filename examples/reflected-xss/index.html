@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reflected XSS Example</title>
+</head>
+<body>
+  <h1>Search</h1>
+  <form action="" method="GET">
+    <input type="text" name="q" />
+    <button type="submit">Search</button>
+  </form>
+  <p>
+    <?php
+    if (isset($_GET['q'])) {
+      echo "You searched for: " . $_GET['q'];
+    }
+    ?>
+  </p>
+</body>
+</html>
+

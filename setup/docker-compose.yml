@@ -1,0 +1,10 @@
+version: '3'
+services:
+  dvwa:
+    image: vulnerables/web-dvwa
+    ports:
+      - "80:80"
+  webgoat:
+    image: webgoat/webgoat-8.0
+    ports:
+      - "8080:8080"
